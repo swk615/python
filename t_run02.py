@@ -43,14 +43,14 @@ def te_move():
     
 def t_check():
     #가로벽 확인
-    if xcor()>225:
+    if t.xcor()>225:
         t.setx(225)
-    elif xcor()<-225:
+    elif t.xcor()<-225:
         t.setx(-225)
     #세로벽 확인
-    if ycor()>225:
+    if t.ycor()>225:
         t.sety(225)
-    elif ycor()<-225:
+    elif t.ycor()<-225:
         t.sety(-225)
 
 
@@ -69,6 +69,7 @@ def play():
     if d_te>= 20:
         t.ontimer(play,100)
     
+
 
 #배경화면 설정(플레이어, 악당, 먹이)
 t.bgcolor('orange')
